@@ -57,7 +57,7 @@ public class SalaryCalculator {
     }
 
     public double calculateSalary(Employee emp, double totalHours) {
-        return totalHours * emp.getHourlyRate();
+        return totalHours * emp.getMonthlyRate();
     }
 
     public double calculateTotalWithAllowances(Employee emp) {

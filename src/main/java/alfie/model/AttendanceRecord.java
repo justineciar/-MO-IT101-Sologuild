@@ -15,24 +15,24 @@ package alfie.model;
  * 
  */
 
-public class AttendanceRecord {
+public class AttendanceRecord { // Public class. Used as a data model to represent a single employee's attendace log.
+                                // Model: One row in attendance CSV file.
     
-// Fields for private and final only
-    private final String employeeNumber;
-    private final String lastName;
-    private final String firstName;
-    private final String date;
-    private final String logIn;
+    private final String employeeNumber;    // Purpose:     Private fields for the class
+    private final String lastName;          // Explanation:
+    private final String firstName;         //      private     : means they can only be accessed within the class.
+    private final String date;              //                  (ensure encapsulation, for OOP principle).
+    private final String logIn;             //      final       : these values are immutable after the object is created.
     private final String logOut;
 
 // Constructor to initialized every instance of attendance record
     public AttendanceRecord(String employeeNumber, String lastName, String firstName,
                             String date, String logIn, String logOut) {
-        this.employeeNumber = employeeNumber;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.date = date;
-        this.logIn = logIn;
+        this.employeeNumber = employeeNumber;   // Purpose: This is a constructor. It allows to create an attendanceRecord
+        this.lastName = lastName;               //          object and immediatly initialize all its values.
+        this.firstName = firstName;             // Explanation:
+        this.date = date;                       //      1. this.employeeNumber = employee
+        this.logIn = logIn;                     // to be continue
         this.logOut = logOut;
     }
 

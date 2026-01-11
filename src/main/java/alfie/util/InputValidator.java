@@ -9,17 +9,34 @@ package alfie.util;
  * @author Alfie
  */
 
+import java.awt.Color;
 import java.awt.Component;
+import java.util.Map;
 import javax.swing.*;
 
 public class InputValidator {
-
-
+    
+    // Methods for Overloaded reset using a Map
+    public static void resetFieldBackgrounds(Map<String, JTextField> fieldsMap) {
+        for (JTextField field : fieldsMap.values()) {
+            field.setBackground(Color.WHITE);
+        }
+    }
+    
+    // Methods to reset all field background
+    public static void resetFieldBackgrounds(JTextField... fields) {
+        for (JTextField field : fields) {
+            field.setBackground(Color.WHITE);
+        }
+    }
+    
+    // Methods to validate required fields using a Map (with field name labels)
     public static boolean validateRequiredFields(Component parent, JTextField... fields) {
         for (JTextField field : fields) {
             if (field.getText().trim().isEmpty()) {
-                JOptionPane.showMessageDialog(parent, "All required fields must be filled!", "Validation Error", JOptionPane.ERROR_MESSAGE);
+                field.setBackground(Color.PINK);
                 field.requestFocus();
+                JOptionPane.showMessageDialog(parent, "is required.", "Missing Field", JOptionPane.WARNING_MESSAGE);
                 return false;
             }
         }

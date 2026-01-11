@@ -20,7 +20,6 @@ package alfie.view;
 
 import alfie.model.Employee;
 import alfie.util.AttendanceFileHandler;
-import alfie.util.SalaryCalculator;
 import javax.swing.*;
 import java.awt.*;
 
@@ -54,7 +53,7 @@ public class EmployeeDetailView extends JDialog {
         addLabel(contentPanel, "Phone Allowance:", String.format("%.2f", emp.getPhoneAllowance()));
         addLabel(contentPanel, "Clothing Allowance:", String.format("%.2f", emp.getClothingAllowance()));
         addLabel(contentPanel, "Gross Semi-monthly Rate:", String.format("%.2f", emp.getGrossRate()));
-        addLabel(contentPanel, "Hourly Rate:", String.format("%.2f", emp.getHourlyRate()));
+        addLabel(contentPanel, "Hourly Rate:", String.format("%.2f", emp.getMonthlyRate()));
 
         // Buttons
         JButton closeButton = new JButton("Close");

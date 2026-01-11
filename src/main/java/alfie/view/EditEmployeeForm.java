@@ -57,7 +57,7 @@ public class EditEmployeeForm extends JDialog {
         riceSubsidyField.setText(emp.getRiceSubsidy().toString());
         phoneAllowanceField.setText(emp.getPhoneAllowance().toString());
         clothingAllowanceField.setText(emp.getClothingAllowance().toString());
-        hourlyRateField.setText(emp.getHourlyRate().toString());
+        hourlyRateField.setText(emp.getMonthlyRate().toString());
 
         form.add(new JLabel("First Name:")); form.add(firstNameField);
         form.add(new JLabel("Last Name:")); form.add(lastNameField);

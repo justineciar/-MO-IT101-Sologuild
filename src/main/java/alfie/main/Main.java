@@ -15,7 +15,7 @@ package alfie.main;
  */
 
 import javax.swing.*;
-import alfie.view.MainMenu;                 // Import the custom GUI class
+import alfie.view.MainMenu;                // Import the custom GUI class
 import alfie.util.FilePathManager;         // Import centralized file path manager
 
 public class Main {
@@ -24,6 +24,10 @@ public class Main {
         /*
          * Ensures GUI runs on the Event Dispatch Thread.
          * Prevents threading issues with Swing components.
+         * 
+         * SwingUtilities -- utility class for swing-related thread operations.
+         * invokeLater(...) -- Schedule code to run on EDT.
+         * () -> { ... } -- Lambda expression. Represent as runnable.
          */
         SwingUtilities.invokeLater(() -> {
 
@@ -31,9 +35,8 @@ public class Main {
             new FilePathManager("C:/Users/Alfie/Documents/NetBeansProjects/MotorPHCP2");
 
             //  Create and show the main window
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.setVisible(true);
+            MainMenu mainMenu = new MainMenu(); // MainMenu from MainMenu.java class. Object instantiation as mainMenu.
+            mainMenu.setVisible(true);          // Set visible to true to show the MainMenu.java class.
         });
     }
 }
-

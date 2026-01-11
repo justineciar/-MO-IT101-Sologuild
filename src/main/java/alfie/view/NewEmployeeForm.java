@@ -48,6 +48,8 @@ public class NewEmployeeForm extends JDialog {
     private final JTextField semiMonthlyField;
     private final JTextField hourlyRateField;
 
+    private final Map<String, JTextField> requiredFields = new LinkedHashMap<>();
+
     private final EmployeeFileHandler handler;
     private final Runnable refreshCallback;
 
@@ -80,6 +82,25 @@ public class NewEmployeeForm extends JDialog {
         semiMonthlyField = new JTextField();
         hourlyRateField = new JTextField();
 
+        // Register fields as required
+        requiredFields.put("First Name", firstNameField);
+        requiredFields.put("Last Name", lastNameField);
+        requiredFields.put("Birth Date", birthDateField);
+        requiredFields.put("Address", addressField);
+        requiredFields.put("Phone Number", phoneNumberField);
+        requiredFields.put("SSS Number", sssNumberField);
+        requiredFields.put("PhilHealth Number", philHealthField);
+        requiredFields.put("TIN Number", tinNumberField);
+        requiredFields.put("Pag-Ibig Number", pagIbigNumberField);
+        requiredFields.put("Status", statusField);
+        requiredFields.put("Position", positionField);
+        requiredFields.put("Basic Salary", basicSalaryField);
+        requiredFields.put("Rice Subsidy", riceSubsidyField);
+        requiredFields.put("Phone Allowance", phoneAllowanceField);
+        requiredFields.put("Clothing Allowance", clothingAllowanceField);
+        requiredFields.put("Gross Semi-Monthly Rate", semiMonthlyField);
+        requiredFields.put("Hourly Rate", hourlyRateField);
+
         form.add(createRequiredLabel("First Name :")); form.add(firstNameField);
         form.add(createRequiredLabel("Last Name :")); form.add(lastNameField);
         form.add(createRequiredLabel("Birth Date : (MM/DD/YYYY)")); form.add(birthDateField);
@@ -105,35 +126,12 @@ public class NewEmployeeForm extends JDialog {
         add(saveButton, BorderLayout.SOUTH);
     }
 
-    @SuppressWarnings({"CollectionsToArray", "UnnecessaryReturnStatement"})
     private void handleSave(ActionEvent e) {
-        
         resetFieldBackgrounds();
-        // Required fields validation
-        Map<String, JTextField> requiredFields = new LinkedHashMap<>();
-        requiredFields.put("First Name", firstNameField);
-        requiredFields.put("Last Name", lastNameField);
-        requiredFields.put("Birth Date", birthDateField);
-        requiredFields.put("Address", addressField);
-        requiredFields.put("Phone Number", phoneNumberField);
-        requiredFields.put("SSS Number", sssNumberField);
-        requiredFields.put("PhilHealth Number", philHealthField);
-        requiredFields.put("TIN Number", tinNumberField);
-        requiredFields.put("Pag-Ibig Number", pagIbigNumberField);
-        requiredFields.put("Status", statusField);
-        requiredFields.put("Position", positionField);
-        requiredFields.put("Basic Salary", basicSalaryField);
-        requiredFields.put("Rice Subsidy", riceSubsidyField);
-        requiredFields.put("Phone Allowance", phoneAllowanceField);
-        requiredFields.put("Clothing Allowance", clothingAllowanceField);
-        requiredFields.put("Gross Semi-Monthly Rate", semiMonthlyField);
-        requiredFields.put("Hourly Rate", hourlyRateField);
 
         if (!InputValidator.validateRequiredFields(this, requiredFields.values().toArray(new JTextField[0]))) {
             return;
         }
-
-
 
         try {
             Employee newEmp = new Employee();
@@ -151,9 +149,9 @@ public class NewEmployeeForm extends JDialog {
             newEmp.setBasicSalary(parseFieldAsDouble(basicSalaryField, "Basic Salary"));
             newEmp.setRiceSubsidy(parseFieldAsDouble(riceSubsidyField, "Rice Subsidy"));
             newEmp.setPhoneAllowance(parseFieldAsDouble(phoneAllowanceField, "Phone Allowance"));
-            newEmp.setClothingAllowance(parseFieldAsDouble(clothingAllowanceField, "Clothing Allowanc"));
+            newEmp.setClothingAllowance(parseFieldAsDouble(clothingAllowanceField, "Clothing Allowance"));
             newEmp.setGrossRate(parseFieldAsDouble(semiMonthlyField, "Semi-Monthly"));
-            newEmp.setHourlyRate(parseFieldAsDouble(hourlyRateField, "Hourly Rate"));
+            newEmp.setMonthlyRate(parseFieldAsDouble(hourlyRateField, "Hourly Rate"));
 
             boolean success = handler.saveEmployee(newEmp);
             if (success) {
@@ -161,11 +159,14 @@ public class NewEmployeeForm extends JDialog {
                 refreshCallback.run();
                 dispose();
             } else {
+                //Debbuging console message purpose only. Remove after dubbuging.
                 JOptionPane.showMessageDialog(this, "Failed to save employee.", "Error", JOptionPane.ERROR_MESSAGE);
             }
 
         } catch (NumberFormatException ex) {
-            return;
+            //Debbuging console message purpose purpose only. Remove after dubbuging.
+            JOptionPane.showMessageDialog(this, "Some numeric fields are invalid. Please check highlighted fields.",
+                    "Input Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -191,12 +192,13 @@ public class NewEmployeeForm extends JDialog {
 
         return String.format("%03d", max + 1);
     }
+
     private double parseFieldAsDouble(JTextField field, String fieldName) {
         String value = field.getText().trim();
         try {
             field.setBackground(Color.WHITE);
             return Double.parseDouble(value);
-        }   catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             field.setBackground(new Color(255, 102, 102));
             JOptionPane.showMessageDialog(
                 this,
@@ -208,18 +210,14 @@ public class NewEmployeeForm extends JDialog {
             throw e;
         }
     }
+
     private void resetFieldBackgrounds() {
-        JTextField[] allFields = {
-            basicSalaryField, riceSubsidyField, phoneAllowanceField,
-            clothingAllowanceField, semiMonthlyField, hourlyRateField
-        };
-        for (JTextField field : allFields) {
+        for (JTextField field : requiredFields.values()) {
             field.setBackground(Color.WHITE);
         }
     }
-    private JLabel createRequiredLabel(String labelText) {
-        JLabel label = new JLabel("<html>" + labelText + " <font color='red'>*</font></html>");
-        return label;
-    }
 
+    private JLabel createRequiredLabel(String labelText) {
+        return new JLabel("<html>" + labelText + " <font color='red'>*</font></html>");
+    }
 }

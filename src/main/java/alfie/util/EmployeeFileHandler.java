@@ -79,7 +79,7 @@ public class EmployeeFileHandler {
                 String.format("%.2f", emp.getPhoneAllowance()),
                 String.format("%.2f", emp.getClothingAllowance()),
                 String.format("%.2f", emp.getGrossRate()),
-                String.format("%.2f", emp.getHourlyRate())
+                String.format("%.2f", emp.getMonthlyRate())
             ));
             writer.write("\n");
             return true;
@@ -130,7 +130,7 @@ public class EmployeeFileHandler {
                     String.valueOf(emp.getPhoneAllowance()),
                     String.valueOf(emp.getClothingAllowance()),
                     String.valueOf(emp.getGrossRate()),
-                    String.valueOf(emp.getHourlyRate())
+                    String.valueOf(emp.getMonthlyRate())
                 ));
                 writer.newLine();
             }
@@ -196,4 +196,3 @@ public class EmployeeFileHandler {
     }
 
 }
-

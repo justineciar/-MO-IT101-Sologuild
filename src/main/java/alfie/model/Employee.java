@@ -2,17 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package alfie.model;
-
-/**
- * 
- * Part of MotorPH Change Requests
- * Change request form: MPHCR02-Feature 2
- * Purpose: Model class (General use) with getter and setter.
- *  Note: No argument constructor.
- * 
- */
 
 public class Employee {
 
@@ -34,7 +24,7 @@ public class Employee {
     private Double phoneAllowance;
     private Double clothingAllowance;
     private Double grossRate;
-    private Double hourlyRate;
+    private Double monthlyRate;
 
     public Employee() {
     }
@@ -44,7 +34,7 @@ public class Employee {
                     String address, String phoneNumber, String sssNumber, String philHealthNumber,
                     String tin, String pagIbigNumber, String status, String position,
                     String immediateSupervision, String basicSalary, String riceSubsidy,
-                    String phoneAllowance, String clothingAllowance, String grossRate, String hourlyRate) {
+                    String phoneAllowance, String clothingAllowance, String grossRate, String monthlyRate) {
         this.employeeNumber = employeeNumber;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -63,7 +53,7 @@ public class Employee {
         this.phoneAllowance = parseDoubleOrZero(phoneAllowance);
         this.clothingAllowance = parseDoubleOrZero(clothingAllowance);
         this.grossRate = parseDoubleOrZero(grossRate);
-        this.hourlyRate = parseDoubleOrZero(hourlyRate);
+        this.monthlyRate = parseDoubleOrZero (monthlyRate);
     }
 
     private double parseDoubleOrZero(String value) {
@@ -80,7 +70,7 @@ public class Employee {
             immediateSupervision,
             String.valueOf(basicSalary), String.valueOf(riceSubsidy),
             String.valueOf(phoneAllowance), String.valueOf(clothingAllowance),
-            String.valueOf(grossRate), String.valueOf(hourlyRate)
+            String.valueOf(grossRate), String.valueOf(monthlyRate)
         );
     }
 
@@ -103,7 +93,7 @@ public class Employee {
     public Double getPhoneAllowance() { return phoneAllowance; }
     public Double getClothingAllowance() { return clothingAllowance; }
     public Double getGrossRate() { return grossRate; }
-    public Double getHourlyRate() { return hourlyRate; }
+    public Double getMonthlyRate() { return monthlyRate; }
 
     // Setters
     public void setEmployeeNumber(String employeeNumber) { this.employeeNumber = employeeNumber; }
@@ -124,5 +114,5 @@ public class Employee {
     public void setPhoneAllowance(Double phoneAllowance) { this.phoneAllowance = phoneAllowance; }
     public void setClothingAllowance(Double clothingAllowance) { this.clothingAllowance = clothingAllowance; }
     public void setGrossRate(Double grossRate) { this.grossRate = grossRate; }
-    public void setHourlyRate(Double hourlyRate) { this.hourlyRate = hourlyRate; }
+    public void setMonthlyRate(Double monthlyRate) { this.monthlyRate = monthlyRate; }
 }

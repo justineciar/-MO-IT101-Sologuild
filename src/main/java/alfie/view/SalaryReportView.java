@@ -47,7 +47,7 @@ public class SalaryReportView {
 
         // Add info
         contentPanel.add(makeLine("Total Hours Worked", String.format("%.2f hrs", totalHours), contentFont));
-        contentPanel.add(makeLine("Hourly Rate", String.format("₱%.2f", emp.getHourlyRate()), contentFont));
+        contentPanel.add(makeLine("Hourly Rate", String.format("₱%.2f", emp.getMonthlyRate()), contentFont));
         contentPanel.add(Box.createRigidArea(new Dimension(0, 10)));
 
         contentPanel.add(makeLine("Basic Salary", String.format("₱%.2f", emp.getBasicSalary()), contentFont));
