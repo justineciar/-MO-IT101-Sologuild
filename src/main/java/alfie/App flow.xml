@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<root>
+    
+src/
+├── main/
+│   ├── java/
+│   │   ├── motorph/
+│   │   │   ├── view/         (All GUI classes)
+│   │   │   ├── model/        (Data models)
+│   │   │   ├── controller/   (Business logic)
+│   │   │   ├── util/         (File handlers)
+│   │   │   └── Main.java     (Entry point)
+│   └── resources/            (CSV files)
+
++-----------------------------------+       +-----------------------------------+
+|           <<Main Class>>          |       |          EmployeeForm             |
+|           MainMenu                |       +-----------------------------------+
++-----------------------------------+       | - employee: Employee              |
+| - controlPanel: ControlPanel      |<>-----| - callback: Runnable              |
+| - employeeTable: JTable           |       +-----------------------------------+
+| - statusArea: JTextArea           |       | + EmployeeForm(Employee, Runnable)|
+| - attendanceLogList: JList        |       | + setVisible(boolean)            |
++-----------------------------------+       +-----------------------------------+
+| + updateEmployeeTable()           |
+| + logAndDisplay(String)           |       +-----------------------------------+
++-----------------------------------+       |       EmployeeListView            |
+                                           +-----------------------------------+
++-----------------------------------+       | - tableModel: DefaultTableModel   |
+|       ControlPanel                |       | - employeeList: List<Employee>    |
++-----------------------------------+       +-----------------------------------+
+| - topPanel: JPanel                |       | + refreshEmployeeList()          |
+| - bottomPanel: JPanel             |       | + setVisible(boolean)            |
+| - viewAllBtn: JButton             |       +-----------------------------------+
+| - searchBtn: JButton              |
+| - addBtn: JButton                 |       +-----------------------------------+
+| - computePayBtn: JButton          |       |    SalaryComputationView          |
+| - clockInBtn: JButton             |       +-----------------------------------+
+| - breakOutBtn: JButton            |       | - employee: Employee              |
+| - breakInBtn: JButton             |       | - payPeriod: DateRange           |
+| - clockOutBtn: JButton            |       +-----------------------------------+
++-----------------------------------+       | + calculatePay()                  |
+                                           | + setVisible(boolean)            |
++-----------------------------------+       +-----------------------------------+
+|       EmployeeFileHandler         |
++-----------------------------------+
+| + readEmployees(): List<Employee> |       +-----------------------------------+
+| + saveEmployees(List<Employee>)   |       |     AttendanceFileHandler         |
++-----------------------------------+       +-----------------------------------+
+                                           | + logAttendance(Attendance)       |
++-----------------------------------+       | + getAttendanceRecords(): List<>  |
+|           Employee                |       +-----------------------------------+
++-----------------------------------+
+| - id: String                      |       +-----------------------------------+
+| - name: String                    |       |     EmployeeDataManager           |
+| - position: String                |       +-----------------------------------+
+| - salary: double                  |       | - fileHandler: EmployeeFileHandler|
++-----------------------------------+       +-----------------------------------+
+| + toArray(): Object[]             |       | + addEmployee(Employee)          |
++-----------------------------------+       | + updateEmployee(Employee)       |
+                                           | + deleteEmployee(String)          |
+                                           +-----------------------------------+
+</root>
+
