@@ -185,7 +185,7 @@ public class EmployeeFileHandler {
 
 
     public boolean saveAllEmployees(List<Employee> employees) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter("C:\\Users\\Alfie\\Documents\\NetBeansProjects\\MotorPHCP2\\MotorPH Employee Details.csv"))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(FilePathManager.getInstance().getEmployeeFilePath()))) {
             for (Employee emp : employees) {
                 writer.println(emp.toCSV());
             }

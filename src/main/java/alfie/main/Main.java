@@ -32,7 +32,8 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
 
             //  Initialize FilePathManager ONCE before any other file operation occurs.
-            new FilePathManager("C:/Users/Alfie/Documents/NetBeansProjects/MotorPHCP2");
+            //  Uses the project's working directory instead of a hardcoded path so it runs on any machine.
+            new FilePathManager(System.getProperty("user.dir"));
 
             //  Create and show the main window
             MainMenu mainMenu = new MainMenu(); // MainMenu from MainMenu.java class. Object instantiation as mainMenu.

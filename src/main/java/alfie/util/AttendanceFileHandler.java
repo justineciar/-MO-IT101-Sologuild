@@ -64,7 +64,7 @@ public class AttendanceFileHandler {
                 .filter(r -> {
                     String[] parts = r.getDate().split("/");
                     if (parts.length == 3) {
-                        String recordMonth = String.format("%2d", Integer.parseInt(parts[0]));
+                        String recordMonth = String.format("%02d", Integer.parseInt(parts[0]));
                         String recordYear = parts[2];
                         return recordMonth.equals(monthTwoDigit) && recordYear.endsWith(year);
                     }
