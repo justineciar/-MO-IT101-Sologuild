@@ -1,0 +1,14 @@
+Request ID,Employee ID,Employee Name,Leave Type,Start Date,End Date,Duration,Reason,Submitted Date,Status,Reviewed By,Review Date
+1783916255310,10006,Andrea Mae Villanueva,Vacation Leave,07/24/2026,07/25/2026,2 day(s),12345,2026-07-13T09:47:35.310088900,Approved,Brad San Jose,2026-07-15T13:15:07.428085200
+
+1784186020861,10007,Brad San Jose,"""Villanueva, Andrea Mae""",Paid Time Off (PTO),07/16/2026,07/16/2026,1 day(s),vac,2026-07-16T12:43:40.861197100,Pending,,
+1784186058031,10007,Brad San Jose,"""Villanueva, Andrea Mae""",Sick Leave,06/16/2026,07/16/2026,31 day(s),sick,2026-07-16T12:44:18.031742400,Pending,,
+1784186083559,10007,Brad San Jose,"""Villanueva, Andrea Mae""",Vacation Leave,05/16/2026,06/16/2026,32 day(s),vac,2026-07-16T12:44:43.559270500,Pending,,
+1784186812611,10006,Andrea Mae Villanueva,"""""""Lim, Antonio""""""",Sick Leave,07/17/2026,07/17/2026,1 day(s),sick,2026-07-16T12:56:52.611006300,Rejected,Antonio Lim,2026-07-20T05:19:03.333117
+1784187066610,10002,Antonio Lim,"""""""Garcia, Manuel III""""""",Vacation Leave,08/16/2026,08/17/2026,2 day(s),vac,2026-07-16T13:01:06.610049500,Approved,Andrea Mae Villanueva,2026-07-17T10:56:18.351708500
+
+
+
+
+
+1784557969205,10006,Andrea Mae Villanueva,"Lim, Antonio",Paid Time Off (PTO),07/25/2026,07/26/2026,2 day(s),Test 2,2026-07-20T22:32:49.205046800,Pending,,

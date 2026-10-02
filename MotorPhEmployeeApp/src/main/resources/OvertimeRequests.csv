@@ -1,0 +1,12 @@
+Request ID,Employee ID,Employee Name,Supervisor,Date,Start Time,End Time,Overtime Hours,Reason,Submitted Date,Status,Reviewed By,Review Date
+
+
+OT-20260720021533819,10005,Eduard Hernandez,"""Lim, Antonio""",07/21/2026,05:00 PM,08:00 PM,3.00,Complete Reports,2026-07-20T02:15:33.819851500,Rejected,Antonio Lim,2026-07-20T05:46:41.915603800
+OT-20260720054412956,10005,Eduard Hernandez,"""Lim, Antonio""",07/20/2026,05:00 PM,07:00 PM,2.00,Test,2026-07-20T05:44:12.957872500,Rejected,Antonio Lim,2026-07-20T05:46:51.790879200
+
+OT-20260720060835181,10005,Eduard Hernandez,"""""""Lim, Antonio""""""",07/23/2026,05:00 PM,08:00 PM,3.00,Test,2026-07-20T06:08:35.182607300,Reviewed,Josie Lopez,2026-07-20T17:14:36.633609
+
+OT-20260720060941238,10005,Eduard Hernandez,"""Lim, Antonio""",07/23/2026,05:00 PM,07:00 PM,2.00,Test Reject,2026-07-20T06:09:41.238980300,Rejected,Antonio Lim,2026-07-20T06:10:01.767758400
+
+OT-20260720222220349,10006,Andrea Mae Villanueva,"Lim, Antonio",07/21/2026,05:00 PM,09:00 PM,4.00,Test,2026-07-20T22:22:20.350485100,Pending,,
+OT-20260720223232028,10006,Andrea Mae Villanueva,"Lim, Antonio",07/23/2026,05:00 PM,07:00 PM,2.00,Test 1,2026-07-20T22:32:32.029559300,Pending,,
