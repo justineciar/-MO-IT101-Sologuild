@@ -1,0 +1,8 @@
+Dispute ID,Employee ID,Employee Name,Cutoff Period,Date of Record,Time In,Time Out,Overtime Hours,Category,Evidence,Remarks,Submitted Date,Status,Reviewed By,Review Date
+1783916028635,10006,Andrea Mae Villanueva,"""June 1 - 15, 2024""",07/12/2026,08:00 AM,05:30 PM,.5,Incorrect Overtime,,overtime,2026-07-13T09:43:48.635165700,Rejected,,
+1784101161749,10006,Andrea Mae Villanueva,"""September 16 - 30, 2024""",07/13/2026,08:00 AM,05:30 PM,.5,Incorrect Overtime,,OT,2026-07-15T13:09:21.749278900,Corrected,Josie Lopez,2026-07-20T14:43:32.264086900
+1784186410701,10007,Brad San Jose,"""June 16 - 30, 2024""",11/16/2026,08:00 AM,05:30 PM,ihhn,Missing Time In,,12345,2026-07-16T12:50:10.701705200,Rejected,Anthony Salcedo,2026-07-17T11:52:13.450785100
+1784266534021,10040,Heidi Dsouza,"""July 16 - 31, 2026""",07/16/2026,08:00 AM,05:00 PM,1,Missing Time Out,,missing,2026-07-17T11:05:34.021838900,Corrected,Josie Lopez,2026-07-20T17:07:50.255059700
+
+1784490381737,10005,Eduard Hernandez,"December 16 - 31, 2024",07/10/2026,08:00 AM,05:00 PM,4,Missing Time In,,test,2026-07-20T03:46:21.737044700,Pending,,
+1784497484107,10005,Eduard Hernandez,"December 16 - 31, 2024",07/09/2026,08:00 AM,05:00 PM,4,Incorrect Overtime,,Test,2026-07-20T05:44:44.107976100,Pending,,

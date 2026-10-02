@@ -1,0 +1,5 @@
+Request ID,Employee ID,Employee Name,Old Basic Salary,New Basic Salary,Old Rice Subsidy,New Rice Subsidy,Old Phone Allowance,New Phone Allowance,Old Clothing Allowance,New Clothing Allowance,Requested By,Requested Date,Status,Reviewed By,Review Date
+1783800410285,10006,Andrea Mae Villanueva,52670.00,52000,1500.00,1500.00,1000.00,1000.00,1000.00,1000.00,HR Staff,2026-07-12T01:36:50.355732200,Approved,Payroll Manager,2026-07-12T01:38:29.520172100
+
+1783927966522,10006,Andrea Mae Villanueva,52670.00,52000,1500.00,1500.00,1000.00,1000.00,1000.00,1000.00,HR Staff,2026-07-13T13:02:46.522364700,Pending,,
+1784265780154,10040,Heidi Dsouza,20000.00,30000.00,1000.00,1000.00,1000.00,1000.00,1000.00,1000.00,HR Staff,2026-07-17T10:53:00.154272400,Pending,,

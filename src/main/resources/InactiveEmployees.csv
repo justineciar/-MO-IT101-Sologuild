@@ -1,0 +1,5 @@
+Employee #,Last Name,First Name,Birthday,Address,Phone Number,SSS #,Philhealth #,TIN #,Pag-ibig #,Status,Position,Immediate Supervisor,Basic Salary,Rice Subsidy,Phone Allowance,Clothing Allowance,Gross Semi-monthly Rate,Hourly Rate
+
+10039,Hernandez,Ana,9/23/1989,"""National Highway, Gingoog, Misamis Occidental""",088-861-012,51-5577638-1,1.57E+11,131-702-374-000,1.52E+11,Regular,MarketingStaff,"""Lim, Antonio""","""52,670""","""1,500""","""1,000""","""1,000""","""26,335""",313.51
+10040,Reyes,Heidi,6/16/1994,"""460 Solanda Street Intramuros 1000, Manila""",786-868-477,41-2511815-0,1.42E+11,176-809-437-000,1.17E+11,Regular,MarketingStaff,"""Garcia, Manuel III""","""60,000""","""1,500""","""2,000""","""1,000""","""30,000""",357.14
+10039,Aquino,Dether,8/4/1989,National Highway Gingoog Misamis Occidental Street,088-861-012,31-8870406-2,2.77E+11,171-711-280-000,2.72E+11,Regular,Chief Executive Officer,Lim Antonio,52670.00,1500.00,1000.00,1000.00,26335.0,252.41
